@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* white */
+    --foreground: 0 0% 0%; /* black */
+
+    --card: 0 0% 100%; /* white */
+    --card-foreground: 0 0% 0%; /* black */
+
+    --popover: 0 0% 100%; /* white */
+    --popover-foreground: 0 0% 0%; /* black */
+
+    --primary: 82 25% 32%; /* #57673D */
+    --primary-foreground: 0 0% 100%; /* white */
+
+    --secondary: 82 25% 90%; /* light version of #57673D */
+    --secondary-foreground: 0 0% 0%; /* black */
+
+    --muted: 82 25% 95%; /* very light version of #57673D */
+    --muted-foreground: 82 25% 25%; /* darker version of #57673D */
+
+    --accent: 82 25% 90%; /* light version of #57673D */
+    --accent-foreground: 0 0% 0%; /* black */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --success: 142.1 76.2% 36.3%;
+    --success-foreground: 0 0% 98%;
+
+    --info: 200.0 86.2% 46.3%;
+    --info-foreground: 0 0% 98%;
+
+    --border: 82 25% 85%; /* light border using logo color */
+    --input: 82 25% 85%; /* light input using logo color */
+    --ring: 82 25% 32%; /* #57673D */
+
+    --radius: 0.5rem;
+
+    /* Custom sidebar vars based on logo colors */
+    --sidebar-background: 82 25% 32%; /* #57673D */
+    --sidebar-foreground: 0 0% 100%; /* white */
+    --sidebar-border: 82 25% 25%; /* darker version */
+    --sidebar-accent: 82 25% 25%; /* darker version */
+    --sidebar-accent-foreground: 0 0% 100%; /* white */
+    --sidebar-ring: 82 25% 50%; /* lighter version */
+  }
+
+  .dark {
+    --background: 0 0% 0%; /* black */
+    --foreground: 0 0% 100%; /* white */
+
+    --card: 0 0% 5%; /* very dark */
+    --card-foreground: 0 0% 100%; /* white */
+
+    --popover: 0 0% 0%; /* black */
+    --popover-foreground: 0 0% 100%; /* white */
+
+    --primary: 82 25% 32%; /* #57673D */
+    --primary-foreground: 0 0% 100%; /* white */
+
+    --secondary: 82 25% 15%; /* dark version of #57673D */
+    --secondary-foreground: 0 0% 100%; /* white */
+
+    --muted: 82 25% 10%; /* very dark version of #57673D */
+    --muted-foreground: 82 25% 70%; /* light version of #57673D */
+
+    --accent: 82 25% 15%; /* dark version of #57673D */
+    --accent-foreground: 0 0% 100%; /* white */
+
+    --destructive: 0 62.8% 30.6%; /* Darker red */
+    --destructive-foreground: 0 85.7% 97.3%;
+
+    --success: 142.1 70.2% 28.3%; /* Darker green */
+    --success-foreground: 140 85.7% 97.3%;
+
+    --info: 200.0 80.2% 38.3%; /* Darker blue */
+    --info-foreground: 200 85.7% 97.3%;
+
+    --border: 82 25% 15%; /* dark border using logo color */
+    --input: 82 25% 15%; /* dark input using logo color */
+    --ring: 82 25% 50%; /* lighter version for focus */
+
+    /* Custom sidebar vars for dark theme */
+    --sidebar-background: 0 0% 5%; /* very dark */
+    --sidebar-foreground: 0 0% 100%; /* white */
+    --sidebar-border: 82 25% 15%; /* dark version */
+    --sidebar-accent: 82 25% 15%; /* dark version */
+    --sidebar-accent-foreground: 0 0% 100%; /* white */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-muted-foreground/30 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground/50;
+}
